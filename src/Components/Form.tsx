@@ -29,7 +29,6 @@ export const Form = ({ dispacht, state }: formProps) => {
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement> | ChangeEvent<HTMLInputElement>) => {
         const isNumberField = ['category', 'cash'].includes(e.target.id)
-
         setActivity({
             ...activity,
             [e.target.id]: isNumberField ? +e.target.value : e.target.value
@@ -80,7 +79,7 @@ export const Form = ({ dispacht, state }: formProps) => {
             <div className=" grid grid-col-1 gap-3">
                 <label htmlFor="cash" className=" font-bold">Cash</label>
                 <input onChange={handleChange} value={activity.cash} type="number" name="" id="cash" className=" border border-slate-300 p-2 rounded-lg "
-                    placeholder="Calorias Ej, 300"
+                    placeholder=" Ej, 300"
                 />
             </div>
 
